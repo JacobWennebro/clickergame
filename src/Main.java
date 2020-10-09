@@ -144,7 +144,7 @@ class ClickerGame implements ActionListener {
         if(clicks > 0) {
             clicks = 0;
             CPSHighscore = 0;
-            button.setBackground(Color.BLUE);
+            button.setBackground(ColorRandomizer());
             frame.setTitle("Clicker Game : " + clicks + " | Best CPS : " + CPSHighscore + " [" + OS + " Edition]");
             writeToSaveFile(clicks, CPSHighscore);
         }
