@@ -156,16 +156,17 @@ class ClickerGame implements ActionListener {
         CPS++;
 
         if(CPS > 20) {
-            frame.setTitle("Fuck you cheater | ClickerGame AC");
-            frame.remove(button);
+            clicks += -10;
+            CPSHighscore = 0;
+            button.setText("Cheats detected");
             return;
         }
 
+        frame.setTitle("Clicker Game : " + clicks + " | Best CPS : " + CPSHighscore + " [" + OS + " Edition]");
         button.setText("CPS: " + CPS);
         button.setBackground(this.ColorRandomizer());
         button.setBounds(0,0,frame.getBounds().width, frame.getBounds().height-100);
-        frame.setTitle("Clicker Game : " + clicks + " | Best CPS : " + CPSHighscore + " [" + OS + " Edition]");
-    
+
     }
 }
 
